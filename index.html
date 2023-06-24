@@ -39,12 +39,14 @@
         display:flex;
         align-items: center;
         padding: 5px;
-        border-radius: 20px;
+        border-radius: 48px;
         opacity: 0.75;
+        box-shadow: var(--shadow-elevation-low);
+        transition: 0.3s;
       }
 
       .item:hover {
-        opacity: 1.0;
+        box-shadow: var(--shadow-elevation-medium);
       }
 
       .item-link {
