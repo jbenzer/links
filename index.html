@@ -98,6 +98,24 @@
         gap: 30px;
       }
 
+      .background--custom {
+        background-color: #FFFFFF;
+        width: 100%;
+        min-height: 100%;
+        height: fit-content;
+        position: absolute;
+        overflow: hidden;
+        z-index: -3;
+        top: 0;
+        left: 0;
+      } 
+
+      canvas#canvas {
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        min-height: 100%;
+      }
       :root {
       --shadow-color: 272deg 21% 35%;
       --shadow-elevation-low: 0.3px 0.5px 0.8px hsl(var(--shadow-color) / 0.17), 0.4px 0.9px 1.3px -0.6px hsl(var(--shadow-color) / 0.29), 1px 2px 2.9px -1.2px hsl(var(--shadow-color) / 0.4);
@@ -111,75 +129,82 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:700|Playfair+Display" rel="stylesheet">
   </head>
   <body>
-    <div class="items"> 
-      <div class = "banner">
-        <img src="thumbnails/profile-pic.png" alt = "Julian Benzer Profile Pic" class="banner-image">
+    <div class="background--custom isLoaded">
+      <div class="items"> 
+        <div class = "banner">
+          <img src="thumbnails/profile-pic.png" alt = "Julian Benzer Profile Pic" class="banner-image">
+        </div>
+
+        <div class="name">
+          Julian J. Benzer
+        </div>
+
+        <div class="social-icons">
+          <a href="https://github.com/jbenzer" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/jj-benzer-754b3a128/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+
+          <a href="https://www.instagram.com/jj_benzer/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://twitter.com/jjbenzer" target="_blank">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+
+        <div class="item">
+          <img src="thumbnails/MBDTF.webp" class="thumbnail">
+          <a class="item-link" target="_blank" href="https://pitchfork.com/reviews/albums/14880-my-beautiful-dark-twisted-fantasy/">
+            My Beautiful Dark Twisted Fantasy -Kanye West
+          </a>
+        </div>
+
+        <div class="item">
+          <img src="thumbnails/InRainbows.webp" class="thumbnail">
+          <a class="item-link" target="_blank" href="https://pitchfork.com/reviews/albums/10785-in-rainbows/">
+            In Rainbows -Radiohead
+          </a>
+        </div>
+
+        <div class="item">
+          <img src="thumbnails/MVOTC.webp" class="thumbnail">
+          <a class="item-link" target="_blank" href="https://pitchfork.com/reviews/albums/17963-vampire-weekend-modern-vampires-of-the-city/">
+            Modern Vampires of the City -Vampire Weekend
+          </a>
+        </div>
+
+        <div class="item">
+          <img src="thumbnails/Blond.webp" class="thumbnail">
+          <a class="item-link" target="_blank" href="https://pitchfork.com/reviews/albums/22295-blonde-endless/">
+            Blond -Frank Ocean
+          </a>
+        </div>
+
+        <div class="item">
+          <img src="thumbnails/Blueprint.webp" class="thumbnail">
+          <a class="item-link" target="_blank" href="https://pitchfork.com/reviews/albums/4216-the-blueprint/">
+            The Blueprint -Jay-Z
+          </a>
+        </div>
+
+        <div class="item">
+          <img src="thumbnails/Exile.webp" class="thumbnail">
+          <a class="item-link" target="_blank" href="https://pitchfork.com/reviews/albums/14264-exile-on-main-st-deluxe-edition/">
+            Exile on Mainstreet -The Rolling Stones
+          </a>
+        </div>
       </div>
-
-      <div class="name">
-        Julian J. Benzer
-      </div>
-
-      <div class="social-icons">
-        <a href="https://github.com/jbenzer" target="_blank">
-          <i class="fa-brands fa-github"></i>
-        </a>
-
-        <a href="https://www.linkedin.com/in/jj-benzer-754b3a128/" target="_blank">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-
-        <a href="https://www.instagram.com/jj_benzer/" target="_blank">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-
-        <a href="https://twitter.com/jjbenzer" target="_blank">
-          <i class="fa-brands fa-twitter"></i>
-        </a>
-      </div>
-
-      <div class="item">
-        <img src="thumbnails/MBDTF.webp" class="thumbnail">
-        <a class="item-link" target="_blank" href="https://pitchfork.com/reviews/albums/14880-my-beautiful-dark-twisted-fantasy/">
-          My Beautiful Dark Twisted Fantasy -Kanye West
-        </a>
-      </div>
-
-      <div class="item">
-        <img src="thumbnails/InRainbows.webp" class="thumbnail">
-        <a class="item-link" target="_blank" href="https://pitchfork.com/reviews/albums/10785-in-rainbows/">
-          In Rainbows -Radiohead
-        </a>
-      </div>
-
-      <div class="item">
-        <img src="thumbnails/MVOTC.webp" class="thumbnail">
-        <a class="item-link" target="_blank" href="https://pitchfork.com/reviews/albums/17963-vampire-weekend-modern-vampires-of-the-city/">
-          Modern Vampires of the City -Vampire Weekend
-        </a>
-      </div>
-
-      <div class="item">
-        <img src="thumbnails/Blond.webp" class="thumbnail">
-        <a class="item-link" target="_blank" href="https://pitchfork.com/reviews/albums/22295-blonde-endless/">
-          Blond -Frank Ocean
-        </a>
-      </div>
-
-      <div class="item">
-        <img src="thumbnails/Blueprint.webp" class="thumbnail">
-        <a class="item-link" target="_blank" href="https://pitchfork.com/reviews/albums/4216-the-blueprint/">
-          The Blueprint -Jay-Z
-        </a>
-      </div>
-
-      <div class="item">
-        <img src="thumbnails/Exile.webp" class="thumbnail">
-        <a class="item-link" target="_blank" href="https://pitchfork.com/reviews/albums/14264-exile-on-main-st-deluxe-edition/">
-          Exile on Mainstreet -The Rolling Stones
-        </a>
-      </div>
+      <canvas id="canvas" width="1022" height="600" class="isLoaded"> </canvas>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/gh/greentfrapp/pocoloco@minigl/minigl.js"></script>
+    <script>
+      var gradient = new Gradient();
+      gradient.initGradient("#canvas");
+    </script>
   </body>
 </html>
